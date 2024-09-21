@@ -2,12 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Reset and base styles */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Custom properties (CSS variables) */
 :root {
   /* Fonts */
   --font-primary: 'Roboto', sans-serif;
@@ -22,7 +24,7 @@
 
   --transition-speed: 0.3s;
 
-  /* light theme (default) */
+  /* Light theme (default) */
   --color-bg-primary: #ECDFCC;
   --color-bg-secondary: #697565;
   --color-text-primary: #121212;
@@ -33,6 +35,7 @@
 }
 
 [web-theme="dark"] {
+  /* Dark theme overrides */
   --color-bg-primary: #181C14;
   --color-bg-secondary: #3C3D37;
   --color-text-primary: #e0e0e0;
@@ -42,6 +45,7 @@
   --color-error: #FF7777;
 }
 
+/* Base styles */
 html {
   font-size: 16px;
   scroll-behavior: smooth;
@@ -52,33 +56,57 @@ body {
   line-height: 1.6;
   color: var(--color-text-primary);
   background-color: var(--color-bg-primary);
-  transition: background-color var(--transition-speed) ease-in-out,
-  color var(--transition-speed) ease-in-out;
+  transition:
+          background-color var(--transition-speed) ease-in-out,
+          color var(--transition-speed) ease-in-out;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-secondary);
   margin-bottom: var(--spacing-md);
-  color: var(--color-text-primary);
 }
 
 p {
   margin-bottom: var(--spacing-md);
-  color: var(--color-text-secondary);
 }
 
 a {
   color: var(--color-accent-secondary);
   text-decoration: none;
-  transition: color var(--transition-speed) ease;
 }
 
 a:hover {
   color: var(--color-accent-primary);
 }
 
+/* Responsive design adjustments */
 @media (max-width: 768px) {
   html {
     font-size: 14px;
   }
+}
+
+/* Custom classes for theme colors */
+.bg-primary {
+  background-color: var(--color-bg-primary);
+}
+
+.bg-secondary {
+  background-color: var(--color-bg-secondary);
+}
+
+.text-primary {
+  color: var(--color-text-primary);
+}
+
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.accent-primary {
+  color: var(--color-accent-primary);
+}
+
+.accent-secondary {
+  color: var(--color-accent-secondary);
 }
