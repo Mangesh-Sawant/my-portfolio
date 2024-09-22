@@ -1,6 +1,7 @@
 import React from 'react';
 import TitleTextComponent from "../../library/TitleTextComponet/TitleTextComponent.jsx";
 import Button from "../Button/Button.jsx";
+import {IconMail, IconFileDownload} from '@tabler/icons-react';
 
 const About = () => {
     return (
@@ -19,9 +20,16 @@ const About = () => {
                         I believe in continuous learning and am always excited to take on new challenges in the
                         ever-evolving world of web development.
                     </p>
-                    <div className="flex justify-center md:justify-start m-auto w-fit">
-                        <Button variant="outline" size="small">
-                            Get in Touch
+                    <div className="flex justify-center md:justify-start m-auto w-fit space-x-4">
+                        <Button variant="secondary" size="small">
+                            <div className="flex gap-2">
+                                Get in Touch <IconMail className="mr-2" size={20}/>
+                            </div>
+                        </Button>
+                        <Button variant="outline" size="large">
+                            <div className="flex gap-2">
+                                Download PDF <IconFileDownload className="mr-2" size={20}/>
+                            </div>
                         </Button>
                     </div>
                 </div>

@@ -115,3 +115,7 @@ a:hover {
 .scroll-indicator-color {
     border-color: var(--color-scroll-indicator);
 }
+
+.border-solid-2{
+    border: 2px solid var(--color-text-secondary);
+}

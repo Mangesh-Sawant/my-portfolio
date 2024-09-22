@@ -39,7 +39,7 @@ const HeroSection = () => {
                     <img
                         src={myImage}
                         alt="Mangesh Sawant"
-                        className="rounded-full w-64 h-64 md:w-96 md:h-96 object-cover mx-auto"
+                        className="rounded-full w-64 h-64 md:w-96 md:h-96 object-cover mx-auto border-solid-2"
                     />
                 </div>
             </div>

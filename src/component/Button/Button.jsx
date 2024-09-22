@@ -12,8 +12,8 @@ const Button = ({
     const baseStyles = 'font-bold rounded transition-colors duration-300 focus:outline-none';
 
     const variants = {
-        primary: 'bg-accent-primary text-white hover:bg-accent-secondary',
-        secondary: 'bg-secondary text-primary hover:bg-primary hover:text-secondary',
+        primary: 'bg-accent-primary text-white hover:bg-accent-secondary whitespace-nowrap',
+        secondary: 'bg-secondary text-primary hover:bg-primary hover:text-secondary whitespace-nowrap',
         outline: 'bg-transparent border-2 border-accent-primary text-accent-primary hover:bg-accent-primary hover:text-white'
     };
 
