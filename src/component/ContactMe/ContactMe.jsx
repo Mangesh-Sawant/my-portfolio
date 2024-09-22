@@ -1,5 +1,7 @@
-import React, {useState, useRef, useEffect} from 'react';
-import {IconPhone, IconMapPin, IconBrandLinkedin, IconMail} from '@tabler/icons-react';
+import React, { useState, useRef, useEffect } from 'react';
+import Lottie from 'lottie-react';
+import successAnimation from '../../assets/email-sent-animation.json'; // Adjust the path as needed
+import { IconPhone, IconMapPin, IconBrandLinkedin, IconMail } from '@tabler/icons-react';
 import emailjs from '@emailjs/browser';
 import Button from "../../library/Button/Button.jsx";
 
@@ -7,6 +9,7 @@ const ContactMe = () => {
     const form = useRef();
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState(null);
+    const [showLottie, setShowLottie] = useState(false);
 
     useEffect(() => {
         if (submitStatus === 'error') {
@@ -22,13 +25,13 @@ const ContactMe = () => {
         e.preventDefault();
         setIsSubmitting(true);
 
-        console.log('Form data:', new FormData(form.current));
-
-        emailjs.sendForm('service_h034n3m', 'template_hhk2ykp', form.current, 'Hn_Hb0QbVRWlJHkAF')
+        emailjs.sendForm('service_h034n3m', 'template_fr9xl89', form.current, 'J5FEtBjmVxB2-5DPu')
             .then((result) => {
                 console.log(result.text);
                 setSubmitStatus('success');
+                setShowLottie(true);
                 form.current.reset();
+                setTimeout(() => setShowLottie(false), 3000); // Hide Lottie after 3 seconds
             }, (error) => {
                 console.log(error.text);
                 setSubmitStatus('error');
@@ -39,7 +42,7 @@ const ContactMe = () => {
     };
 
     const handleClick = () => {
-        window.open('https://www.linkedin.com/in/mangesh-sawant-47554024a/',"_blank")
+        window.open('https://www.linkedin.com/in/mangesh-sawant-47554024a/', "_blank")
     };
 
     return (
@@ -67,15 +70,15 @@ const ContactMe = () => {
                             <div className="mt-8">
                                 <Button variant="outline"
                                         size="large"
-                                        onClick={() => handleClick()}>
-                                    <div className="flex gap-2 whitespace-nowrap items-center w-full  justify-center">
+                                        onClick={handleClick}>
+                                    <div className="flex gap-2 whitespace-nowrap items-center w-full justify-center">
                                         Connect On <IconBrandLinkedin className="mr-2" size={24}/>
                                     </div>
                                 </Button>
                             </div>
                         </div>
 
-                        <div className="md:w-1/2 bg-secondary p-6 md:p-8">
+                        <div className="md:w-1/2 bg-secondary p-6 md:p-8 relative">
                             <form ref={form} onSubmit={sendEmail}>
                                 <div className="mb-4">
                                     <label htmlFor="from_name"
@@ -99,24 +102,33 @@ const ContactMe = () => {
                                               required></textarea>
                                 </div>
                                 <Button
-                                    onClick={sendEmail}
+                                    type="submit"
                                     variant="outline"
                                     size="large"
                                     disabled={isSubmitting}
                                 >
-                                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                                    {isSubmitting ? 'Sending...' : 'Send Email'}
                                 </Button>
-                                {submitStatus === 'success' && (
-                                    <p className="mt-4 text-accent-primary">Message sent successfully!</p>
-                                )}
                                 {submitStatus === 'error' && (
-                                    <p className="mt-4 text-red-600">Failed to send message. Please try again.</p>
+                                    <p className="mt-4 text-red-600 absolute text-base -bottom-3 right-4">Failed to send message. Please try again.</p>
                                 )}
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
+            {showLottie && (
+                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+                    <div className="w-64 h-64">
+                        <Lottie
+                            animationData={successAnimation}
+                            loop={false}
+                            autoplay={true}
+                            onComplete={() => setShowLottie(false)}
+                        />
+                    </div>
+                </div>
+            )}
         </div>
     );
 };
