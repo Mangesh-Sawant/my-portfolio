@@ -40,7 +40,7 @@ const About = () => {
                             </div>
                         </Button>
                         <Button variant="outline" size="large">
-                            <div className="flex gap-2">
+                            <div className="flex gap-2 whitespace-nowrap">
                                 Download PDF <IconFileDownload className="mr-2" size={20}/>
                             </div>
                         </Button>
