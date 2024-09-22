@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import DarkModeToggle from '../../library/DarkModeButton/DarkModeButton.jsx';
+import { IconMenu2, IconX } from '@tabler/icons-react';
 import '../../index.css';
 
 const Header = () => {
     const [isDarkMode, setIsDarkMode] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const SCROLL_OFFSET = 100;
 
     const toggleTheme = () => {
@@ -24,7 +26,20 @@ const Header = () => {
                 behavior: 'smooth'
             });
         }
+        setIsMenuOpen(false);
     };
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
+    const navItems = [
+        { id: 'about', label: 'About' },
+        { id: 'skills', label: 'Skills' },
+        { id: 'portfolio', label: 'Projects' },
+        { id: 'tools', label: 'Tools' },
+        { id: 'contact', label: 'Contact Me' },
+    ];
 
     return (
         <header className="bg-secondary py-4 px-6 shadow-md fixed top-0 left-0 right-0 z-50">
@@ -33,42 +48,54 @@ const Header = () => {
                     <span className="text-accent-primary">M</span>angesh Sawant
                 </div>
                 <div className="flex items-center space-x-6">
-                    <nav>
+                    <nav className="hidden md:block">
                         <ul className="flex space-x-6">
-                            <li>
-                                <button onClick={scrollToSection('about')}
-                                        className="text-primary hover:text-accent-primary transition duration-300">
-                                    About
-                                </button>
-                            </li>
-                            <li>
-                                <button onClick={scrollToSection('portfolio')}
-                                        className="text-primary hover:text-accent-primary transition duration-300">
-                                    Projects
-                                </button>
-                            </li>
-                            <li>
-                                <button onClick={scrollToSection('skills')}
-                                        className="text-primary hover:text-accent-primary transition duration-300">
-                                    Skills
-                                </button>
-                            </li>
-                            <li>
-                                <button onClick={scrollToSection('tools')}
-                                        className="text-primary hover:text-accent-primary transition duration-300">
-                                    Tools
-                                </button>
-                            </li>
-                            <li>
-                                <button onClick={scrollToSection('contact')}
-                                        className="text-primary hover:text-accent-primary transition duration-300">
-                                    Contact Me
-                                </button>
-                            </li>
+                            {navItems.map((item) => (
+                                <li key={item.id}>
+                                    <button
+                                        onClick={scrollToSection(item.id)}
+                                        className="text-primary hover:text-accent-primary transition duration-300"
+                                    >
+                                        {item.label}
+                                    </button>
+                                </li>
+                            ))}
                         </ul>
                     </nav>
                     <DarkModeToggle isDarkMode={isDarkMode} toggleTheme={toggleTheme}/>
+                    <button
+                        className="md:hidden text-primary hover:text-accent-primary transition duration-300"
+                        onClick={toggleMenu}
+                    >
+                        {isMenuOpen ? <IconX size={24} /> : <IconMenu2 size={24} />}
+                    </button>
                 </div>
+            </div>
+            <div
+                className={`md:hidden bg-secondary overflow-hidden transition-all duration-300 ease-in-out ${
+                    isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                }`}
+            >
+                <nav className="py-4">
+                    <ul className="flex flex-col space-y-4">
+                        {navItems.map((item, index) => (
+                            <li
+                                key={item.id}
+                                className={`transition-all duration-300 ${
+                                    isMenuOpen ? 'animate-slideIn' : 'animate-slideOut'
+                                }`}
+                                style={{ animationDelay: `${index * 50}ms` }}
+                            >
+                                <button
+                                    onClick={scrollToSection(item.id)}
+                                    className="text-primary hover:text-accent-primary transition duration-300 w-full text-left px-6 py-2"
+                                >
+                                    {item.label}
+                                </button>
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
             </div>
         </header>
     );

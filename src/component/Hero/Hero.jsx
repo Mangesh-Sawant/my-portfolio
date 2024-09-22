@@ -1,5 +1,5 @@
 import React from 'react';
-import {TypeAnimation} from 'react-type-animation';
+import { TypeAnimation } from 'react-type-animation';
 import myImage from '../../assets/my-profile-image.jpeg'
 import ScrollDownIndicator from "../../library/scrollDownIndicator/ScrollDownIndicator.jsx";
 
@@ -18,41 +18,43 @@ const HeroSection = () => {
 
     return (
         <section id="Hero" className="bg-primary min-h-screen flex items-center">
-            <div className="container mx-auto px-4 flex flex-col md:flex-row items-center">
-                <div className="md:w-1/2 mb-8 md:mb-0 sm:pl-32">
+            <div className="container mx-auto px-4 flex flex-col sm:flex-row items-center">
+                <div className="w-full sm:w-1/2 order-2 sm:order-1 mb-8 sm:mb-0 sm:pl-8 md:pl-16 lg:pl-32">
                     <h1 className="text-4xl md:text-6xl font-bold text-accent-primary mb-4 text-center sm:text-start">
                         Hi,
                         <br/>
                         I'm Mangesh Sawant
                     </h1>
-                    <TypeAnimation
-                        sequence={[
-                            'Angular Developer',
-                            1000,
-                            'React Developer',
-                            1000,
-                            'Frontend Specialist',
-                            1000,
-                            'Responsive Design Expert',
-                            1000,
-                            'UI/UX Enthusiast',
-                            1000,
-                            'Web Application Builder',
-                            1000,
-                            'User-Centric Developer',
-                            1000
-                        ]}
-                        wrapper="h2"
-                        cursor={true}
-                        repeat={Infinity}
-                        className="text-2xl md:text-3xl text-secondary"
-                    />
+                    <div className="w-full flex justify-center sm:justify-start">
+                        <TypeAnimation
+                            sequence={[
+                                'Angular Developer',
+                                1000,
+                                'React Developer',
+                                1000,
+                                'Frontend Specialist',
+                                1000,
+                                'Responsive Design Expert',
+                                1000,
+                                'UI/UX Enthusiast',
+                                1000,
+                                'Web Application Builder',
+                                1000,
+                                'User-Centric Developer',
+                                1000
+                            ]}
+                            wrapper="h2"
+                            cursor={true}
+                            repeat={Infinity}
+                            className="text-2xl md:text-3xl text-secondary text-center sm:text-start"
+                        />
+                    </div>
                 </div>
-                <div className="md:w-1/2">
+                <div className="w-full sm:w-1/2 order-1 sm:order-2 mb-8 sm:mb-0">
                     <img
                         src={myImage}
                         alt="Mangesh Sawant"
-                        className="rounded-full w-44 h-44 md:w-96 md:h-96 object-cover mx-auto border-solid-2"
+                        className="rounded-full w-44 h-44 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover mx-auto border-solid border-2 border-accent-primary"
                     />
                 </div>
             </div>

@@ -16,11 +16,21 @@ export default {
                     '50%': { opacity: 1, transform: 'rotate(45deg) translate(5px, 5px)' },
                     '100%': { opacity: 0, transform: 'rotate(45deg) translate(10px, 10px)' },
                 },
+                slideIn: {
+                    '0%': { transform: 'translateX(-100%)', opacity: 0 },
+                    '100%': { transform: 'translateX(0)', opacity: 1 },
+                },
+                slideOut: {
+                    '0%': { transform: 'translateX(0)', opacity: 1 },
+                    '100%': { transform: 'translateX(-100%)', opacity: 0 },
+                },
             },
             animation: {
                 float: 'float 3s ease-in-out infinite',
                 'float-delay': 'float 3s ease-in-out 1.5s infinite',
                 scrollDown: 'scrollDown 2s infinite',
+                slideIn: 'slideIn 0.3s ease-out forwards',
+                slideOut: 'slideOut 0.3s ease-in forwards',
             }
         },
     },
