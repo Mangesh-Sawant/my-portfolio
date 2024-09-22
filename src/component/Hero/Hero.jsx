@@ -17,7 +17,7 @@ const HeroSection = () => {
     };
 
     return (
-        <section id="Hero" className="bg-primary min-h-screen flex items-center">
+        <section id="hero" className="bg-primary min-h-screen flex items-center">
             <div className="container mx-auto px-4 flex flex-col sm:flex-row items-center">
                 <div className="w-full sm:w-1/2 order-2 sm:order-1 mb-8 sm:mb-0 sm:pl-8 md:pl-16 lg:pl-32">
                     <h1 className="text-4xl md:text-6xl font-bold text-accent-primary mb-4 text-center sm:text-start">

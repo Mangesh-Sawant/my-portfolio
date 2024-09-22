@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import DarkModeToggle from '../../library/DarkModeButton/DarkModeButton.jsx';
-import { IconMenu2, IconX } from '@tabler/icons-react';
+import {IconMenu2, IconX} from '@tabler/icons-react';
 import '../../index.css';
 
 const Header = () => {
@@ -34,19 +34,20 @@ const Header = () => {
     };
 
     const navItems = [
-        { id: 'about', label: 'About' },
-        { id: 'skills', label: 'Skills' },
-        { id: 'portfolio', label: 'Projects' },
-        { id: 'tools', label: 'Tools' },
-        { id: 'contact', label: 'Contact Me' },
+        {id: 'about', label: 'About'},
+        {id: 'skills', label: 'Skills'},
+        {id: 'portfolio', label: 'Projects'},
+        {id: 'tools', label: 'Tools'},
+        {id: 'contact', label: 'Contact Me'},
     ];
 
     return (
         <header className="bg-secondary py-4 px-6 shadow-md fixed top-0 left-0 right-0 z-50">
             <div className="container mx-auto flex justify-between items-center">
-                <div className="text-primary text-2xl font-bold">
-                    <span className="text-accent-primary">M</span>angesh Sawant
-                </div>
+                <button className="text-primary text-2xl font-bold cursor-pointer"
+                        onClick={scrollToSection('hero')}>
+                    Mangesh Sawant
+                </button>
                 <div className="flex items-center space-x-6">
                     <nav className="hidden md:block">
                         <ul className="flex space-x-6">
@@ -67,7 +68,7 @@ const Header = () => {
                         className="md:hidden text-primary hover:text-accent-primary transition duration-300"
                         onClick={toggleMenu}
                     >
-                        {isMenuOpen ? <IconX size={24} /> : <IconMenu2 size={24} />}
+                        {isMenuOpen ? <IconX size={24}/> : <IconMenu2 size={24}/>}
                     </button>
                 </div>
             </div>
@@ -84,7 +85,7 @@ const Header = () => {
                                 className={`transition-all duration-300 ${
                                     isMenuOpen ? 'animate-slideIn' : 'animate-slideOut'
                                 }`}
-                                style={{ animationDelay: `${index * 50}ms` }}
+                                style={{animationDelay: `${index * 50}ms`}}
                             >
                                 <button
                                     onClick={scrollToSection(item.id)}
