@@ -68,7 +68,7 @@ const Header = () => {
             <div className="container mx-auto flex justify-between items-center">
                 <button className="text-primary text-2xl font-bold cursor-pointer"
                         onClick={scrollToSection('hero')}>
-                    Mangesh Sawant
+                    MS.
                 </button>
                 <div className="flex items-center space-x-6">
                     <nav className="hidden md:block">

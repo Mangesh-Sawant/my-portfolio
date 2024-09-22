@@ -39,7 +39,7 @@ const Tools = () => {
     return (
         <section id="tools" className="bg-primary py-16">
             <div className="container mx-auto px-4">
-                <TitleTextComponent title="Tools I Use" />
+                <TitleTextComponent title="Tools" />
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
                     {tools.map((tool, index) => (
                         <CircularCard

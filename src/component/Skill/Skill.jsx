@@ -39,7 +39,7 @@ const Skills = () => {
     return (
         <section id="skills" className="bg-primary py-16">
             <div className="container mx-auto px-4">
-                <TitleTextComponent title="My Skills" />
+                <TitleTextComponent title="Skills" />
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
                     {skills.map((skill, index) => (
                         <CircularCard
