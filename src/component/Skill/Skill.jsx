@@ -44,7 +44,7 @@ const Skills = () => {
                     {skills.map((skill, index) => (
                         <CircularCard
                             key={index}
-                            skill={skill}
+                            card={skill}
                             icon={iconMap[skill.name]}
                             index={index}
                         />
