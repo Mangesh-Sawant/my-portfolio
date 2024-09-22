@@ -4,6 +4,8 @@ import About from "./component/About/About.jsx";
 import Project from "./component/Project/Project.jsx";
 import Skill from "./component/Skill/Skill.jsx";
 import Tools from "./component/Tools/Tools.jsx";
+import ContactMe from "./component/ContactMe/ContactMe.jsx";
+import Footer from "./component/Footer/Footer.jsx";
 
 function App() {
 
@@ -12,8 +14,10 @@ function App() {
             <Header/>
             <About/>
             <Skill/>
-            <Tools/>
             <Project/>
+            <Tools/>
+            <ContactMe/>
+            <Footer/>
         </>
     )
 }
