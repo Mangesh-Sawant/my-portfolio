@@ -54,7 +54,7 @@ const ProjectCard = ({ project }) => (
 
 const Portfolio = () => {
     return (
-        <section className="bg-primary py-16">
+        <section id="portfolio" className="bg-primary py-16">
             <div className="container mx-auto px-4">
                 <TitleTextComponent title="My Portfolio" />
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

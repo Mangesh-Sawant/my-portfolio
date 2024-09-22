@@ -39,7 +39,7 @@ const ContactMe = () => {
     };
 
     return (
-        <div className="bg-primary mb-12 py-12 px-4 sm:px-6 lg:px-8">
+        <div id="contact" className="bg-primary mb-12 py-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
                 <h1 className="text-4xl font-bold text-center text-accent-primary mb-12">Get in Touch</h1>
 

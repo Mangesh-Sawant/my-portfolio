@@ -4,8 +4,21 @@ import Button from "../Button/Button.jsx";
 import {IconMail, IconFileDownload} from '@tabler/icons-react';
 
 const About = () => {
+
+    const SCROLL_OFFSET = 100;
+    const scrollToSection = (sectionId) => () => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            const offsetTop = section.getBoundingClientRect().top + window.pageYOffset - SCROLL_OFFSET;
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    };
+
     return (
-        <section className="bg-primary py-16">
+        <section id="about" className="bg-primary py-16">
             <div className="flex w-full flex-col mx-auto px-4">
                 <TitleTextComponent title="About Me"></TitleTextComponent>
                 <div className="md:w-2/3 md:pl-8 w-full m-auto">
@@ -21,7 +34,7 @@ const About = () => {
                         ever-evolving world of web development.
                     </p>
                     <div className="flex justify-center md:justify-start m-auto w-fit space-x-4">
-                        <Button variant="secondary" size="small">
+                        <Button variant="secondary" size="small" onClick={scrollToSection('contact')}>
                             <div className="flex gap-2">
                                 Get in Touch <IconMail className="mr-2" size={20}/>
                             </div>
