@@ -40,24 +40,26 @@ const CustomCursor = () => {
 
     return (
         <>
-            <div
-                className={`cursor-dot ${isHovering ? 'hovering' : ''}`}
-                style={{
-                    left: `${position.x - dotSize / 2}px`,
-                    top: `${position.y - dotSize / 2}px`,
-                    width: `${dotSize}px`,
-                    height: `${dotSize}px`
-                }}
-            />
-            <div
-                className={`cursor-circle ${isHovering ? 'hovering' : ''}`}
-                style={{
-                    left: `${position.x - circleSize / 2}px`,
-                    top: `${position.y - circleSize / 2}px`,
-                    width: `${circleSize}px`,
-                    height: `${circleSize}px`
-                }}
-            />
+            <div className="hidden sm:block">
+                <div
+                    className={`cursor-dot ${isHovering ? 'hovering' : ''}`}
+                    style={{
+                        left: `${position.x - dotSize / 2}px`,
+                        top: `${position.y - dotSize / 2}px`,
+                        width: `${dotSize}px`,
+                        height: `${dotSize}px`
+                    }}
+                />
+                <div
+                    className={`cursor-circle ${isHovering ? 'hovering' : ''}`}
+                    style={{
+                        left: `${position.x - circleSize / 2}px`,
+                        top: `${position.y - circleSize / 2}px`,
+                        width: `${circleSize}px`,
+                        height: `${circleSize}px`
+                    }}
+                />
+            </div>
         </>
     );
 };
