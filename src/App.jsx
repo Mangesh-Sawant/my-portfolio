@@ -6,12 +6,14 @@ import Skill from "./component/Skill/Skill.jsx";
 import Tools from "./component/Tools/Tools.jsx";
 import ContactMe from "./component/ContactMe/ContactMe.jsx";
 import Footer from "./component/Footer/Footer.jsx";
+import Hero from "./component/Hero/Hero.jsx";
 
 function App() {
 
     return (
         <>
             <Header/>
+            <Hero/>
             <About/>
             <Skill/>
             <Project/>

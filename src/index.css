@@ -4,109 +4,114 @@
 
 /* Reset and base styles */
 *, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 /* Custom properties (CSS variables) */
 :root {
-  /* Fonts */
-  --font-primary: 'Roboto', sans-serif;
-  --font-secondary: 'Open Sans', sans-serif;
+    /* Fonts */
+    --font-primary: 'Roboto', sans-serif;
+    --font-secondary: 'Open Sans', sans-serif;
 
-  /* Spacing */
-  --spacing-xs: 0.25rem;
-  --spacing-sm: 0.5rem;
-  --spacing-md: 1rem;
-  --spacing-lg: 2rem;
-  --spacing-xl: 4rem;
+    /* Spacing */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 4rem;
 
-  --transition-speed: 0.3s;
+    --transition-speed: 0.3s;
 
-  /* Light theme (default) */
-  --color-bg-primary: #ECDFCC;
-  --color-bg-secondary: #697565;
-  --color-text-primary: #121212;
-  --color-text-secondary: #4f4f4f;
-  --color-accent-primary: #6439FF;
-  --color-accent-secondary: #86D293;
-  --color-error: #FF0000;
+    /* Light theme (default) */
+    --color-bg-primary: #ECDFCC;
+    --color-bg-secondary: #697565;
+    --color-text-primary: #121212;
+    --color-text-secondary: #4f4f4f;
+    --color-accent-primary: #6439FF;
+    --color-accent-secondary: #86D293;
+    --color-error: #FF0000;
+    --color-scroll-indicator: #3C3D37;
 }
 
 [web-theme="dark"] {
-  /* Dark theme overrides */
-  --color-bg-primary: #181C14;
-  --color-bg-secondary: #3C3D37;
-  --color-text-primary: #e0e0e0;
-  --color-text-secondary: #a0a0a0;
-  --color-accent-primary: #4F75FF;
-  --color-accent-secondary: #C0EBA6;
-  --color-error: #FF7777;
+    /* Dark theme overrides */
+    --color-bg-primary: #181C14;
+    --color-bg-secondary: #3C3D37;
+    --color-text-primary: #e0e0e0;
+    --color-text-secondary: #a0a0a0;
+    --color-accent-primary: #4F75FF;
+    --color-accent-secondary: #C0EBA6;
+    --color-error: #FF7777;
+    --color-scroll-indicator: #ECDFCC;
 }
 
 /* Base styles */
 html {
-  font-size: 16px;
-  scroll-behavior: smooth;
+    font-size: 16px;
+    scroll-behavior: smooth;
 }
 
 body {
-  font-family: var(--font-primary);
-  line-height: 1.6;
-  color: var(--color-text-primary);
-  background-color: var(--color-bg-primary);
-  transition:
-          background-color var(--transition-speed) ease-in-out,
-          color var(--transition-speed) ease-in-out;
+    font-family: var(--font-primary);
+    line-height: 1.6;
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-primary);
+    transition: background-color var(--transition-speed) ease-in-out,
+    color var(--transition-speed) ease-in-out;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-secondary);
-  margin-bottom: var(--spacing-md);
+    font-family: var(--font-secondary);
+    margin-bottom: var(--spacing-md);
 }
 
 p {
-  margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
 }
 
 a {
-  color: var(--color-accent-secondary);
-  text-decoration: none;
+    color: var(--color-accent-secondary);
+    text-decoration: none;
 }
 
 a:hover {
-  color: var(--color-accent-primary);
+    color: var(--color-accent-primary);
 }
 
 /* Responsive design adjustments */
 @media (max-width: 768px) {
-  html {
-    font-size: 14px;
-  }
+    html {
+        font-size: 14px;
+    }
 }
 
 /* Custom classes for theme colors */
 .bg-primary {
-  background-color: var(--color-bg-primary);
+    background-color: var(--color-bg-primary);
 }
 
 .bg-secondary {
-  background-color: var(--color-bg-secondary);
+    background-color: var(--color-bg-secondary);
 }
 
 .text-primary {
-  color: var(--color-text-primary);
+    color: var(--color-text-primary);
 }
 
 .text-secondary {
-  color: var(--color-text-secondary);
+    color: var(--color-text-secondary);
 }
 
 .accent-primary {
-  color: var(--color-accent-primary);
+    color: var(--color-accent-primary);
 }
 
 .accent-secondary {
-  color: var(--color-accent-secondary);
+    color: var(--color-accent-secondary);
+}
+
+.scroll-indicator-color {
+    border-color: var(--color-scroll-indicator);
 }
