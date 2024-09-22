@@ -19,7 +19,7 @@ const Button = ({
 
     const sizes = {
         small: 'px-3 py-1 text-sm w-fit',
-        medium: 'px-4 py-2 text-base',
+        medium: 'px-6 py-3 text-base',
         large: 'px-6 py-3 text-lg w-full'
     };
 

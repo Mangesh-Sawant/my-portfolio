@@ -39,8 +39,8 @@ const About = () => {
                         I'm constantly exploring new web technologies and
                         design trends to stay at the forefront of modern web development practices.
                     </p>
-                    <div className="flex justify-center md:justify-start m-auto w-fit space-x-4">
-                        <Button variant="secondary" size="small" onClick={scrollToSection('contact')}>
+                    <div className="flex justify-center md:justify-start m-auto w-fit space-x-4 flex-col sm:flex-row gap-4 items-center">
+                        <Button variant="secondary" size="medium" onClick={scrollToSection('contact')}>
                             <div className="flex gap-2 items-center">
                                 Get in Touch <IconMail className="mr-2" size={20}/>
                             </div>
