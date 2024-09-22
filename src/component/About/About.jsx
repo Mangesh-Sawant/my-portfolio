@@ -36,12 +36,12 @@ const About = () => {
                     </p>
                     <div className="flex justify-center md:justify-start m-auto w-fit space-x-4">
                         <Button variant="secondary" size="small" onClick={scrollToSection('contact')}>
-                            <div className="flex gap-2">
+                            <div className="flex gap-2 items-center">
                                 Get in Touch <IconMail className="mr-2" size={20}/>
                             </div>
                         </Button>
                         <Button variant="outline" size="large">
-                            <div className="flex gap-2 whitespace-nowrap">
+                            <div className="flex gap-2 whitespace-nowrap items-center">
                                 Download PDF <IconFileDownload className="mr-2" size={20}/>
                             </div>
                         </Button>
