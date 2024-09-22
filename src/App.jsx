@@ -1,6 +1,7 @@
 import './App.css'
 import Header from './component/Header/Header.jsx'
 import About from "./component/About/About.jsx";
+import Project from "./component/Project/Project.jsx";
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
         <>
             <Header/>
             <About/>
+            <Project/>
         </>
     )
 }
