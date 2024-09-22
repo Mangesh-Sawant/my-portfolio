@@ -1,6 +1,6 @@
 import React from 'react';
 import TitleTextComponent from "../../library/TitleTextComponet/TitleTextComponent.jsx";
-import Button from "../Button/Button.jsx";
+import Button from "../../library/Button/Button.jsx";
 import {IconMail, IconFileDownload} from '@tabler/icons-react';
 
 const About = () => {

@@ -3,7 +3,7 @@ import TitleTextComponent from '../../library/TitleTextComponet/TitleTextCompone
 import surbhiDocumentImage from '../../assets/project/surbhi-document.png'
 import youtubeCloneImage from '../../assets/project/youtube-clone.jpeg'
 import talenlioImage from '../../assets/project/talenlio.png'
-import Button from "../Button/Button.jsx";
+import Button from "../../library/Button/Button.jsx";
 
 const projects = [
     {

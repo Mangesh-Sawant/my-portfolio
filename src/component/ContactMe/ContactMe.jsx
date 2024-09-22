@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { IconMail, IconPhone, IconMapPin } from '@tabler/icons-react';
 import emailjs from '@emailjs/browser';
-import Button from "../Button/Button.jsx";
+import Button from "../../library/Button/Button.jsx";
 
 const ContactMe = () => {
     const form = useRef();
