@@ -25,7 +25,7 @@ const projects = [
         title: "Talenlio",
         description: "Talenlio is an AI-powered platform that helps you create standout resumes that are 100% optimized for ATS.",
         image: talenlioImage,
-        link: "https://app.dev.talenlio.com/"
+        link: "https://app.talenlio.com/"
     }
 ];
 

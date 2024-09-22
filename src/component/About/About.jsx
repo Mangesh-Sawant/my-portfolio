@@ -23,15 +23,16 @@ const About = () => {
                 <TitleTextComponent title="About Me"></TitleTextComponent>
                 <div className="md:w-2/3 md:pl-8 w-full m-auto">
                     <p className="text-text-primary mb-4 text-center">
-                        Hello! I'm Mangesh, Enthusiastic Front-End Developer with 1.5 years of experience in
-                        building engaging and user-friendly websites using HTML, CSS, and
-                        Angular. I enjoy designing responsive interfaces that improve user
-                        experience. As a team player, I thrive on collaborating with others to
-                        deliver high-quality projects on schedule.
+                        Hello! I'm Mangesh, an enthusiastic Front-End Developer with 1.5 years of experience in
+                        building engaging and user-friendly websites. I specialize in creating responsive and
+                        interactive web interfaces that enhance user experience. My passion lies in crafting
+                        clean, efficient code and designing intuitive layouts that bring ideas to life on the
+                        digital canvas. As a team player, I thrive on collaborating with others to deliver
+                        high-quality projects on schedule.
                     </p>
                     <p className="text-text-primary mb-6 text-center">
-                        I believe in continuous learning and am always excited to take on new challenges in the
-                        ever-evolving world of web development.
+                        I'm constantly exploring new web technologies and
+                        design trends to stay at the forefront of modern web development practices.
                     </p>
                     <div className="flex justify-center md:justify-start m-auto w-fit space-x-4">
                         <Button variant="secondary" size="small" onClick={scrollToSection('contact')}>
