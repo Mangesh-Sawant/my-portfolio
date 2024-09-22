@@ -10,6 +10,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    cursor: none;
 }
 
 /* Custom properties (CSS variables) */
@@ -24,8 +25,13 @@
     --spacing-md: 1rem;
     --spacing-lg: 2rem;
     --spacing-xl: 4rem;
+    --transition-speed: 0.7s;
 
-    --transition-speed: 0.3s;
+    --cursor-color: white;
+    --cursor-dot-size: 5px;
+    --cursor-circle-size: 30px;
+    --cursor-hover-circle-size: 50px;
+    --cursor-transition-duration: 0.2s;
 
     /* Light theme (default) */
     --color-bg-primary: #ECDFCC;
@@ -36,6 +42,7 @@
     --color-accent-secondary: #86D293;
     --color-error: #FF0000;
     --color-scroll-indicator: #3C3D37;
+    --cursor-hover-color: var(--color-accent-secondary);
 }
 
 [web-theme="dark"] {
@@ -48,6 +55,7 @@
     --color-accent-secondary: #C0EBA6;
     --color-error: #FF7777;
     --color-scroll-indicator: #ECDFCC;
+    --cursor-hover-color: var(--color-accent-primary);
 }
 
 /* Base styles */
@@ -149,4 +157,42 @@ a:hover {
 
 body {
     -ms-overflow-style: none;
+}
+
+.cursor-dot {
+    width: var(--cursor-dot-size);
+    height: var(--cursor-dot-size);
+    background-color: var(--cursor-color);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transition: all var(--cursor-transition-duration) ease;
+}
+
+.cursor-circle {
+    width: var(--cursor-circle-size);
+    height: var(--cursor-circle-size);
+    border: 2px solid var(--cursor-color);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9998;
+    transition: all var(--cursor-transition-duration) ease;
+}
+
+.cursor-dot.hovering,
+.cursor-circle.hovering {
+    background-color: var(--cursor-hover-color);
+    border-color: var(--cursor-hover-color);
+}
+
+.cursor-circle.hovering {
+    width: var(--cursor-hover-circle-size);
+    height: var(--cursor-hover-circle-size);
+}
+
+/* Ensure interactive elements show the pointer cursor */
+button, a, [role="button"], input[type="submit"], input[type="button"], textarea, select {
+    cursor: pointer;
 }

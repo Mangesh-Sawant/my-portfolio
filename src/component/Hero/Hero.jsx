@@ -1,7 +1,7 @@
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import myImage from '../../assets/my-profile-image.jpeg'
-import ScrollDownIndicator from "../../library/scrollDownIndicator/ScrollDownIndicator.jsx";
+import ScrollDownIndicator from "../../library/ScrollDownIndicator/ScrollDownIndicator.jsx";
 
 const HeroSection = () => {
     const SCROLL_OFFSET = 100;

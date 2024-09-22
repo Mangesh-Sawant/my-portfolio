@@ -7,11 +7,13 @@ import Tools from "./component/Tools/Tools.jsx";
 import ContactMe from "./component/ContactMe/ContactMe.jsx";
 import Footer from "./component/Footer/Footer.jsx";
 import Hero from "./component/Hero/Hero.jsx";
+import CustomCursorComponent from "./library/CustomCursor/CustomCursorComponent.jsx";
 
 function App() {
 
     return (
         <>
+            <CustomCursorComponent/>
             <Header/>
             <Hero/>
             <About/>

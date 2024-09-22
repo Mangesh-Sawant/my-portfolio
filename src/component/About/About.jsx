@@ -41,14 +41,13 @@ const About = () => {
                     </p>
                     <div className="flex justify-center md:justify-start m-auto w-fit space-x-4 flex-col sm:flex-row gap-4 items-center">
                         <Button variant="secondary" size="medium" onClick={scrollToSection('contact')}>
-                            <div className="flex gap-2 items-center">
-                                Get in Touch <IconMail className="mr-2" size={20}/>
+                            <div role="button" className="flex gap-2 items-center">
+                                Get in Touch <IconMail role="button" className="mr-2" size={20}/>
                             </div>
                         </Button>
-                        <Button variant="outline" size="large">
-                            <div className="flex gap-2 whitespace-nowrap items-center"
-                            onClick={()=>{handleDownload()}}>
-                                Download PDF <IconFileDownload className="mr-2" size={20}/>
+                        <Button variant="outline" size="large" onClick={()=>{handleDownload()}}>
+                            <div role="button" className="flex gap-2 whitespace-nowrap items-center">
+                                Download PDF <IconFileDownload role="button" className="mr-2" size={20}/>
                             </div>
                         </Button>
                     </div>

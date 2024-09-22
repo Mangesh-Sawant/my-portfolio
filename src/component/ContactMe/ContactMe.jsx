@@ -71,8 +71,8 @@ const ContactMe = () => {
                                 <Button variant="outline"
                                         size="large"
                                         onClick={handleClick}>
-                                    <div className="flex gap-2 whitespace-nowrap items-center w-full justify-center">
-                                        Connect On <IconBrandLinkedin className="mr-2" size={24}/>
+                                    <div role="button" className="flex gap-2 whitespace-nowrap items-center w-full justify-center">
+                                        Connect On <IconBrandLinkedin role="button" className="mr-2" size={24}/>
                                     </div>
                                 </Button>
                             </div>
