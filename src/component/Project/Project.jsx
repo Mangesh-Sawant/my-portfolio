@@ -35,7 +35,7 @@ const handleClick = (url) => {
 
 const ProjectCard = ({project}) => (
     <div
-        className="relative bg-secondary rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:scale-105 border-solid-2 group">
+        className="relative bg-secondary rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:scale-105 border-solid-2 group">
         <div className="h-48 flex items-center justify-center overflow-hidden">
             <img
                 src={project.image}
@@ -52,7 +52,7 @@ const ProjectCard = ({project}) => (
         </div>
         <div
             className="absolute inset-0 backdrop-filter backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <div className="p-6 max-w-xs text-primary bg-secondary rounded-2xl border-2 border-white">
+            <div className="p-6 max-w-xs text-primary bg-secondary rounded-xl border-2 border-white">
                 <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
                 <p className="text-sm mb-4">{project.description}</p>
                 <Button onClick={() => handleClick(project.link)} variant="secondary" size="large">
