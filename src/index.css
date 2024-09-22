@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -118,6 +119,6 @@ a:hover {
     border-color: var(--color-scroll-indicator);
 }
 
-.border-solid-2{
+.border-solid-2 {
     border: 2px solid var(--color-text-secondary);
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import TitleTextComponent from "../../library/TitleTextComponet/TitleTextComponent.jsx";
 import Button from "../../library/Button/Button.jsx";
 import {IconMail, IconFileDownload} from '@tabler/icons-react';
+import myResume from "../../assets/MangeshSawant-Resume-New.pdf";
 
 const About = () => {
 
@@ -15,6 +16,10 @@ const About = () => {
                 behavior: 'smooth'
             });
         }
+    };
+
+    const handleDownload = () => {
+        window.open(myResume, '_blank');
     };
 
     return (
@@ -41,7 +46,8 @@ const About = () => {
                             </div>
                         </Button>
                         <Button variant="outline" size="large">
-                            <div className="flex gap-2 whitespace-nowrap items-center">
+                            <div className="flex gap-2 whitespace-nowrap items-center"
+                            onClick={()=>{handleDownload()}}>
                                 Download PDF <IconFileDownload className="mr-2" size={20}/>
                             </div>
                         </Button>
