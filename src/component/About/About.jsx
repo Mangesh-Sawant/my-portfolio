@@ -1,6 +1,7 @@
 import React from 'react';
 import TitleTextComponent from "../../library/TitleTextComponet/TitleTextComponent.jsx";
 import profileImage from "../../assets/my-profile-image.jpeg";
+import Button from "../Button/Button.jsx";
 
 const About = () => {
     return (
@@ -27,10 +28,9 @@ const About = () => {
                             ever-evolving world of web development.
                         </p>
                         <div className="flex justify-center md:justify-start">
-                            <a href="#contact"
-                               className="bg-accent-primary text-white px-6 py-2 rounded-full hover:bg-accent-secondary transition duration-300">
+                            <Button variant="outline" size="small">
                                 Get in Touch
-                            </a>
+                            </Button>
                         </div>
                     </div>
                 </div>

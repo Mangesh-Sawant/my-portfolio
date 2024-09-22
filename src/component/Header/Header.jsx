@@ -18,7 +18,7 @@ const Header = () => {
         <header className="bg-secondary py-4 px-6 shadow-md">
             <div className="container mx-auto flex justify-between items-center">
                 <div className="text-primary text-2xl font-bold">
-                    <span className="text-accent-primary">Y</span>our Name
+                    <span className="text-accent-primary">M</span>angesh Sawant
                 </div>
                 <div className="flex items-center space-x-6">
                     <nav>
