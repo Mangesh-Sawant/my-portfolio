@@ -36,7 +36,7 @@ const CustomCursor = () => {
 
     // Cursor size based on hover state
     const dotSize = isHovering ? 3 : 5;
-    const circleSize = isHovering ? 50 : 30;
+    const circleSize = isHovering ? 30 : 20;
 
     return (
         <>
