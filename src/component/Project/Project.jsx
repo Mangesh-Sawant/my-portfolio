@@ -3,6 +3,7 @@ import TitleTextComponent from '../../library/TitleTextComponet/TitleTextCompone
 import surbhiDocumentImage from '../../assets/project/surbhi-document.png'
 import youtubeCloneImage from '../../assets/project/youtube-clone.jpeg'
 import talenlioImage from '../../assets/project/talenlio.png'
+import hotelImage from '../../assets/project/hotel.png'
 import Button from "../../library/Button/Button.jsx";
 
 const projects = [
@@ -26,6 +27,13 @@ const projects = [
         description: "Talenlio is an AI-powered platform that helps you create standout resumes that are 100% optimized for ATS.",
         image: talenlioImage,
         link: "https://app.talenlio.com/"
+    },
+    {
+        id: 4,
+        title: "Hotel",
+        description: "This project is a Simple CRUD (Create, Read, Update, Delete) Application built using Angular for the frontend and Node.js with Express for the backend, utilizing MongoDB for data storage.",
+        image: hotelImage,
+        link: "https://hotel-c8efe.web.app/menus"
     }
 ];
 
