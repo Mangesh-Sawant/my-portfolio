@@ -8,8 +8,16 @@ import ContactMe from "./component/ContactMe/ContactMe.jsx";
 import Footer from "./component/Footer/Footer.jsx";
 import Hero from "./component/Hero/Hero.jsx";
 import CustomCursorComponent from "./library/CustomCursor/CustomCursorComponent.jsx";
+import {useEffect} from "react";
+import 'aos/dist/aos.css';  // Import AOS CSS
+import AOS from 'aos';      // Import AOS JS
+
 
 function App() {
+
+    useEffect(() => {
+        AOS.init({duration: 1000});
+    }, []);
 
     return (
         <>

@@ -2,7 +2,7 @@ import React from 'react';
 import TitleTextComponent from "../../library/TitleTextComponet/TitleTextComponent.jsx";
 import Button from "../../library/Button/Button.jsx";
 import {IconMail, IconFileDownload} from '@tabler/icons-react';
-import myResume from "../../assets/MangeshSawant-Resume-New.pdf";
+import myResume from "../../assets/my-resume-13-april.pdf";
 
 const About = () => {
 
@@ -23,7 +23,7 @@ const About = () => {
     };
 
     return (
-        <section id="about" className="bg-primary py-16">
+        <section data-aos="fade-up" id="about" className="bg-primary py-16">
             <div className="flex w-full flex-col mx-auto px-4">
                 <TitleTextComponent title="About Me"></TitleTextComponent>
                 <div className="md:w-2/3 md:pl-8 w-full m-auto">

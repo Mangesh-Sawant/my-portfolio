@@ -19,7 +19,7 @@ const HeroSection = () => {
     return (
         <section id="hero" className="bg-primary min-h-screen flex items-center">
             <div className="container mx-auto px-4 flex flex-col sm:flex-row items-center">
-                <div className="w-full sm:w-1/2 order-2 sm:order-1 mb-8 sm:mb-0 sm:pl-8 md:pl-16 lg:pl-32">
+                <div data-aos="fade-right" className="w-full sm:w-1/2 order-2 sm:order-1 mb-8 sm:mb-0 sm:pl-8 md:pl-16 lg:pl-32">
                     <h1 className="text-4xl md:text-6xl font-bold text-accent-primary mb-4 text-center sm:text-start">
                         Hi,
                         <br/>
@@ -50,12 +50,14 @@ const HeroSection = () => {
                         />
                     </div>
                 </div>
-                <div className="w-full sm:w-1/2 order-1 sm:order-2 mb-8 sm:mb-0">
-                    <img
-                        src={myImage}
-                        alt="Mangesh Sawant"
-                        className="rounded-full w-44 h-44 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover mx-auto border-solid border-2 border-accent-primary"
-                    />
+                <div data-aos="fade-left" className="w-full sm:w-1/2 order-1 sm:order-2 mb-8 sm:mb-0">
+                    <div className="relative overflow-hidden w-44 h-44 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 mx-auto border-solid border-2 border-accent-primary rounded-full shadow-xl">
+                        <img
+                            src={myImage}
+                            alt="Mangesh Sawant"
+                            className="w-full h-full object-cover rounded-full"
+                        />
+                    </div>
                 </div>
             </div>
             <button className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer"

@@ -42,8 +42,8 @@ const handleClick = (url) => {
 };
 
 const ProjectCard = ({project}) => (
-    <div
-        className="relative bg-secondary rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:scale-105 border-solid-2 group">
+    <div data-aos="fade-up"
+         className="relative bg-secondary rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:scale-105 border-solid-2 group">
         <div className="h-48 flex items-center justify-center overflow-hidden">
             <img
                 src={project.image}
