@@ -2,7 +2,7 @@ import React from 'react';
 import TitleTextComponent from "../../library/TitleTextComponet/TitleTextComponent.jsx";
 import Button from "../../library/Button/Button.jsx";
 import {IconMail, IconFileDownload} from '@tabler/icons-react';
-import myResume from "../../assets/MangeshSawant-Resume-New.pdf";
+import myResume from "../../assets/my-resume-13-april.pdf";
 
 const About = () => {
 
